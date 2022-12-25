@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "550827247907",
+    "project_id": "charitygiveaway-e985d",
+    "storage_bucket": "charitygiveaway-e985d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550827247907:android:ede62bc069c3c828366496",
+        "android_client_info": {
+          "package_name": "com.example.projects_graduation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550827247907-11bfhpubpgb0jc17t261rehjp14vh1s3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projects_graduation",
+            "certificate_hash": "97ce5b67917b4425ebf952ec9d22f5dc71228e4a"
+          }
+        },
+        {
+          "client_id": "550827247907-nnpek7kvbmjbnkq4ie5cihp9ejg06nq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHNt7x2M8QUoHF-W8asXSM-GaWGXvwWl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550827247907-nnpek7kvbmjbnkq4ie5cihp9ejg06nq0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "550827247907-j8gr9n6ub1lq0i4jmmmqb52njv8cc1h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.charitygiveaway.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
