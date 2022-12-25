@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:projects_graduation/controlles%20/home_Controller.dart';
+import 'package:projects_graduation/controlles/home_Controller.dart';
 
 import '../../../constant/constants.dart';
 
