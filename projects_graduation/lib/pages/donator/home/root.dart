@@ -1,15 +1,16 @@
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:projects_graduation/pages/auth/profile/profile_Screen.dart';
 import 'package:projects_graduation/pages/donator/home/home_screen.dart';
 
-class BottomNavBarWidget extends StatefulWidget {
+class AppRoot extends StatefulWidget {
   static String routeNav = "/root";
-  const BottomNavBarWidget({Key? key}) : super(key: key);
+  const AppRoot({Key? key}) : super(key: key);
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<BottomNavBarWidget> {
+class _MyHomePageState extends State<AppRoot> {
   int currentIndex = 0;
 
   @override
@@ -29,7 +30,7 @@ class _MyHomePageState extends State<BottomNavBarWidget> {
     MyHomePage(),
     Container(),
     Container(),
-    Container(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -55,16 +56,13 @@ class _MyHomePageState extends State<BottomNavBarWidget> {
         ),
         items: const <BubbleBottomBarItem>[
           BubbleBottomBarItem(
-            showBadge: true,
-            badge: Text("5"),
-            badgeColor: Colors.deepPurpleAccent,
             backgroundColor: Colors.red,
             icon: Icon(
-              Icons.dashboard,
+              Icons.home,
               color: Colors.black,
             ),
             activeIcon: Icon(
-              Icons.dashboard,
+              Icons.home,
               color: Colors.red,
             ),
             title: Text("Home"),
@@ -94,14 +92,14 @@ class _MyHomePageState extends State<BottomNavBarWidget> {
           BubbleBottomBarItem(
               backgroundColor: Colors.green,
               icon: Icon(
-                Icons.menu,
+                Icons.person,
                 color: Colors.black,
               ),
               activeIcon: Icon(
-                Icons.menu,
+                Icons.person,
                 color: Colors.green,
               ),
-              title: Text("Menu"))
+              title: Text("profile"))
         ],
       ),
       body: screens[currentIndex],
