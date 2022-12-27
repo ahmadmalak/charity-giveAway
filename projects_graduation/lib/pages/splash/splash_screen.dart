@@ -16,7 +16,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   void _splashTimer() async {
-    bool isLogged = await box.read('isLogged');
+    bool isLogged = await box.read('isLogged')??false;
     Timer(const Duration(seconds: 3), () {
       if (isLogged) {
         pushNamedAndClearStack(context, appRootRoute);

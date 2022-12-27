@@ -1,8 +1,9 @@
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:projects_graduation/pages/auth/profile/profile_Screen.dart';
+import 'package:projects_graduation/pages/donator/Post%20Item/postitrm.dart';
 import 'package:projects_graduation/pages/donator/home/home_screen.dart';
-
+import 'package:get/get.dart';
 class AppRoot extends StatefulWidget {
   static String routeNav = "/root";
   const AppRoot({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<AppRoot> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {Get.to(PostItem());},
         backgroundColor: Colors.red,
         child: const Icon(Icons.add),
       ),
