@@ -43,7 +43,7 @@ class SearchField extends StatelessWidget {
         controller: controller,
         style: const TextStyle(
           fontSize: 15,
-          color: Colors.black,
+          color: Colors.white,
           fontFamily: "Poppins",
           fontWeight: FontWeight.w500,
         ),

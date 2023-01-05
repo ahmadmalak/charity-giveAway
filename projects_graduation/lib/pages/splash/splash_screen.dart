@@ -15,13 +15,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  void _splashTimer() async {
-    bool isLogged = await box.read('isLogged');
+  void _splashTimer() {
+    bool isDonorLogged = box.read('isLogged') ?? false;
+    bool isCharityLogged = box.read('isCharityLogged') ?? false;
     Timer(const Duration(seconds: 3), () {
-      if (isLogged) {
+      if (isDonorLogged) {
         pushNamedAndClearStack(context, appRootRoute);
+      } else if (isCharityLogged) {
+        pushNamedAndClearStack(context, charityAppRootRoute);
       } else {
-        pushNamedAndClearStack(context, loginScreenRoute);
+        pushNamedAndClearStack(context, introScreenRoute);
       }
     });
   }
@@ -35,8 +38,17 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset(AppAssets.logoApp),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Image.asset(
+              AppAssets.splashLogo,
+              height: 170,
+              width: 170,
+            ),
+          ),
+        ],
       ),
     );
   }

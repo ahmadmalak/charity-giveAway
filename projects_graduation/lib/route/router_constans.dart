@@ -1,6 +1,10 @@
 const String splashScreenRoute = '/';
 const String appRootRoute = '/root';
+const String charityAppRootRoute = '/charityRoot';
 const String loginScreenRoute = '/login';
-const String signUpScreenRoute = '/signup';
+const String charitySignInScreen = '/charityLogin';
+const String donorSignUpScreenRoute = '/signup';
+const String charitySignUpScreenRoute = '/charitySignup';
 const String homeScreenRoute = '/homeScreen';
 const String profileScreenRoute = '/profile';
+const String introScreenRoute = '/intro';

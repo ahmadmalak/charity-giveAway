@@ -10,7 +10,6 @@ import 'package:projects_graduation/route/routes.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-
   await Firebase.initializeApp();
   runApp(const MyApp());
 }

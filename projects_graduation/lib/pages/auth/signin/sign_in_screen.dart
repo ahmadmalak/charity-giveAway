@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:projects_graduation/route/routes.dart';
@@ -47,11 +48,12 @@ class _SignInScreenState extends State<SignInScreen> {
               key: _formKey,
               child: Column(
                 children: [
-                  const SizedBox(
-                    height: 200,
+                  SizedBox(
+                    height: 150.h,
+                    child: Image.asset(AppAssets.donationIcon),
                   ),
-                  const SizedBox(
-                    height: 80,
+                  SizedBox(
+                    height: 120.h,
                   ),
                   TextFieldSignUp(
                     textInputType: TextInputType.emailAddress,
@@ -86,6 +88,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 10,
                   ),
                   TextFieldSignUp(
+                    obscureText: true,
                     textInputType: TextInputType.text,
                     controller: controller.donarPasswordController,
                     hintText: 'password',
@@ -135,7 +138,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            pushNamed(context: context, routeName: signUpScreenRoute);
+                            pushNamed(context: context, routeName: donorSignUpScreenRoute);
                           },
                           child: const Text(
                             'Sign up',

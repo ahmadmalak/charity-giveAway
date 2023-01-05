@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:projects_graduation/constant/constants.dart';
 
 void showToast({
   required message,
@@ -7,11 +8,9 @@ void showToast({
 }) {
   Fluttertoast.showToast(
     msg: message,
-    backgroundColor: Theme.of(context).colorScheme.background,
-    textColor: Theme.of(context).colorScheme.secondary,
+    backgroundColor: kPrimaryColor,
+    textColor: Colors.white,
     fontSize: 16,
-    gravity: ToastGravity.BOTTOM,
-    webPosition: 'center',
-    timeInSecForIosWeb: 3,
+    gravity: ToastGravity.CENTER_LEFT,
   );
 }

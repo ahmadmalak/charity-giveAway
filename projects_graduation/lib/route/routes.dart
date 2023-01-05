@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:projects_graduation/pages/auth/profile/profile_Screen.dart';
+import 'package:projects_graduation/pages/auth/profile/donor/profile_Screen.dart';
+import 'package:projects_graduation/pages/auth/signin/charity/charity_sign_in.dart';
 import 'package:projects_graduation/pages/auth/signin/sign_in_screen.dart';
-import 'package:projects_graduation/pages/auth/signup/sign_up_screen.dart';
-import 'package:projects_graduation/pages/donator/home/home_screen.dart';
-import 'package:projects_graduation/pages/donator/home/root.dart';
+import 'package:projects_graduation/pages/auth/signup/charity/sign_up_screen.dart';
+import 'package:projects_graduation/pages/auth/signup/donor%20/sign_up_screen.dart';
+import 'package:projects_graduation/pages/collector/home/root.dart';
+import 'package:projects_graduation/pages/splash/intro_screen.dart';
 import 'package:projects_graduation/route/router_constans.dart';
 
+import '../pages/donor/home/home_screen.dart';
+import '../pages/donor/home/root.dart';
 import '../pages/splash/splash_screen.dart';
 
 class MyRouter {
@@ -15,14 +19,22 @@ class MyRouter {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case loginScreenRoute:
         return MaterialPageRoute(builder: (_) => const SignInScreen());
-      case signUpScreenRoute:
-        return MaterialPageRoute(builder: (_) => const SignUpScreen());
+      case donorSignUpScreenRoute:
+        return MaterialPageRoute(builder: (_) => const DonorSignUpScreen());
       case homeScreenRoute:
         return MaterialPageRoute(builder: (_) => const MyHomePage());
       case appRootRoute:
         return MaterialPageRoute(builder: (_) => const AppRoot());
+      case charityAppRootRoute:
+        return MaterialPageRoute(builder: (_) => const CharityAppRoot());
       case profileScreenRoute:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
+      case introScreenRoute:
+        return MaterialPageRoute(builder: (_) => const IntroScreen());
+      case charitySignUpScreenRoute:
+        return MaterialPageRoute(builder: (_) => const CharitySignUpScreen());
+      case charitySignInScreen:
+        return MaterialPageRoute(builder: (_) => const CharitySignInScreen());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

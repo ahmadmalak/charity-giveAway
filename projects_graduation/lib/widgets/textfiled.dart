@@ -9,6 +9,8 @@ class TextFieldSignUp extends StatelessWidget {
   final double horizontalPadding;
   final Color hintColor;
   final double hintSize;
+  final bool enabled;
+  final bool obscureText;
   final TextInputType textInputType;
   final String? Function(String?)? onChanged;
   final String? Function(String?)? onValidator;
@@ -20,7 +22,9 @@ class TextFieldSignUp extends StatelessWidget {
       required this.hintText,
       required this.controller,
       required this.height,
+      this.obscureText = false,
       required this.textInputType,
+      this.enabled = true,
       required this.horizontalPadding,
       required this.verticalPadding,
       required this.onChanged,
@@ -29,6 +33,8 @@ class TextFieldSignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
+      enabled: enabled,
       keyboardType: textInputType,
       controller: controller,
       style: const TextStyle(
